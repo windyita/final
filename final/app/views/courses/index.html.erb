@@ -1,0 +1,21 @@
+
+<p><%= @courses.count %> Courses.</p>
+
+<table class="table table-striped">
+  <tr>
+    <th>Code</th>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Quater</th>
+    <th></th>
+  </tr>
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= course.code %></td>
+      <td><%= link_to course.title, course_url(course.id) %></td>
+      <td><%= course.year %></td>
+      <td><%= course.quater %></td>
+    </tr>
+  <% end %>
+
+</table>

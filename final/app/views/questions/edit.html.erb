@@ -1,0 +1,13 @@
+<%= form_tag "/questions/#{@question.id}", :method => 'patch' do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title, @question.title %>
+  </div>
+
+  <div>
+    <%= label_tag :content %>
+    <%= text_area_tag :content, @question.content %>
+  </div>
+
+  <input type="submit" name="commit" value="Update Question">
+<% end %>

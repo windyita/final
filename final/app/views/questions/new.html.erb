@@ -1,0 +1,28 @@
+<%= form_tag "/questions" do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title, "" %>
+  </div>
+
+  <div>
+    <%= label_tag :content %>
+    <%= text_area_tag :content, "" %>
+  </div>
+
+  <div>
+    <%= label_tag :user_id %>
+    <%= text_field_tag :user_id, "" %>
+  </div>
+
+  <div>
+    <%= label_tag :course_id %>
+    <%= text_field_tag :course_id, "" %>
+  </div>
+
+  <div>
+    <%= label_tag :date %>
+    <%= text_field_tag :date, "" %>
+  </div>
+
+  <input type="submit" name="commit" value="Post Question">
+<% end %>
