@@ -10,3 +10,10 @@ Contributors
 
 **Mengyu Zhang** mengyuzhang@uchicago.edu
 
+Updates
+-------
+
+**5.7** 
+- Finished the course list and specific question list for the course
+- Golden 7 for question model. 
+
