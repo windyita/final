@@ -1,28 +1,12 @@
-== README
+README
+======
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The final project is a piazza-like system.
 
-Things you may want to cover:
+Contributors
+------------
 
-* Ruby version
+**Yang Yan** yang0211@uchicago.edu
 
-* System dependencies
+**Mengyu Zhang** mengyuzhang@uchicago.edu
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
