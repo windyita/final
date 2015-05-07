@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Young 302. https://csmasters.uchicago.edu/page/2014-2015-course-schedule#Spring%20'15", 
+    "user_id": 2, 
+    "question_id": 1, 
+    "date": "4/6/2015"
+  }, 
+  {
+    "content": "I double-checked the syllabus that the department had posted, and it's accurate: https://csmasters.uchicago.edu/page/mpcs-52553-web-development Is there anything not covered on that page that would be helpful for me to elaborate upon?  If so just let me know.", 
+    "user_id": 1, 
+    "question_id": 2, 
+    "date": "4/7/2015"
+  }, 
+  {
+    "content": "I'll probably figure it out from your account name, but later on I'll post the accounts I couldn't figure out.  (GitHub already has a way for me to know all of the account names based on the list of forks)", 
+    "user_id": 1, 
+    "question_id": 3, 
+    "date": "4/11/2015"
+  }
+]

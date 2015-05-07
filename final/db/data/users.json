@@ -1,0 +1,27 @@
+[
+  {
+    "name": "mengyu zhang", 
+    "email": "mengyuzhang@uchicago.edu", 
+    "dept": "computer science", 
+    "role": "student"
+  }, 
+  {
+    "name": "yan yang", 
+    "email": "yanyang@uchicago.edu", 
+    "dept": "computer science", 
+    "role": "student"
+  }, 
+  { 
+    "name": "jeff cohen", 
+    "email": "jeff@uchicago.edu", 
+    "dept": "computer science", 
+    "role": "instructor"
+  }, 
+  { 
+    "name": "yuan gao", 
+    "email": "yuan@uchicago.edu", 
+    "dept": "computer science", 
+    "role": "student"
+  }
+]
+

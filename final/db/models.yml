@@ -1,0 +1,37 @@
+
+User
+  name: string
+  dept: string
+  email: string
+  role: string
+    
+Course
+  code: string
+  title: string
+  year: string
+  quater: string
+  description: text
+
+Enroll
+  user_id: integer
+  course_id: integer
+
+Announcement
+  title: string
+  content: text
+  date: string
+  course_id: integer
+
+Question
+  title: string
+  content: text
+  user_id: integer
+  course_id: integer
+  date: string
+
+Answer
+  content: text
+  user_id: integer
+  question_id: integer
+  date: string
+
