@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   has_many :answers
 
   has_many :enrolls
-  has_many :courses
+  has_many :courses, :through => :enrolls
 end

@@ -1,0 +1,31 @@
+[
+  {
+    "code": "MPCS52011", 
+    "title": "Introduction to Computer Science", 
+    "year": "2014", 
+    "quater": "fall", 
+    "description": "This course is all about constructing your own knowledge of computer systems by building a general-purpose computer system from the ground up."
+  }, 
+  {
+    "code": "CSPP51087", 
+    "title": "High Performance Computing", 
+    "year": "2015", 
+    "quater": "winter", 
+    "description": "Parallel computing allows multiple processing units to work together simultaneously on a common task."
+  }, 
+  {
+    "code": "MPCS51036", 
+    "title": "Java Programming", 
+    "year": "2015", 
+    "quater": "fall", 
+    "description": "This is a fast-paced first course in Java for students with some prior programming experience, though not necessarily Java or any other object-oriented language."
+  }, 
+  {
+    "code": "MPCS53013", 
+    "title": "Big Data", 
+    "year": "2015", 
+    "quater": "fall", 
+    "description": "In this course, we will cover both the theory and practice of Big Data."
+  }
+]
+

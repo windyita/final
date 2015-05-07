@@ -1,7 +1,7 @@
 
 User
   name: string
-  major: string
+  dept: string
   email: string
   role: string
     
@@ -10,7 +10,7 @@ Course
   title: string
   year: string
   quater: string
-  description: string
+  description: text
 
 Enroll
   user_id: integer
@@ -18,7 +18,7 @@ Enroll
 
 Announcement
   title: string
-  content: string
+  content: text
   date: string
   course_id: integer
 

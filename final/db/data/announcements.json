@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Homework #1", 
+    "content": "DUE: Thursday, April 9, 5:29pm The homework for this week is posted here: https://github.com/webdev-spring15/week1-homework", 
+    "date": "4/02/2015", 
+    "course_id": 1
+  }, 
+  {
+    "title": "Homework #3", 
+    "content": "Homework #3 DUE: Thursday, April 23, 5:29pm The homework for this week is posted here: https://github.com/webdev-spring15/week3-homework", 
+    "date": "4/17/2015", 
+    "course_id": 1
+  },
+  {
+    "title": "Correction to HW #3", 
+    "content": "The code I pushed to GitHub contains an error that will prevent you from starting your rails server.", 
+    "date": "4/17/2015", 
+    "course_id": 1
+  }, 
+  {
+    "title": "Another homework correction!", 
+    "content": "My apologies everyone, there's an important typo in the README instructions for the homework.  Big thanks to Susan for pointing this out to me.", 
+    "date": "4/18/2015", 
+    "course_id": 1
+  }, 
+  {
+    "title": "Homework #4", 
+    "content": "Homework #4 DUE: Thursday, April 30, 5:29pm The homework for this week is posted here: https://github.com/webdev-spring15/week4-homework", 
+    "date": "4/23/2015", 
+    "course_id": 1
+  }, 
+  {
+    "title": "!!! IMPORTANT: Your Canvas Submissions", 
+    "content": "We just found out about one issue regarding of submitting on Canvas. The problem is you can only submit either a file OR a text which not what we intended to. ", 
+    "date": "4/14/15", 
+    "course_id": 2
+  }, 
+  {
+    "title": "Canvas update - homework submissions", 
+    "content": "This is an update to @34, but I'm starting a new thread so that it goes out as a notification.", 
+    "date": "4/14/15", 
+    "course_id": 2
+  }, 
+  {
+    "title": "Requesting MySQL credentials", 
+    "content": "I apologize for the inconvenience, but f you have not yet received your MySQL credentials please request an account here: https://newtraell.cs.uchicago.edu/info/services/account_request", 
+    "date": "4/17/15", 
+    "course_id": 2
+  }, 
+  {
+    "title": "Assignment 3 submissions", 
+    "content": "There's a small changes on how to submit assignment 3. Please read carefully", 
+    "date": "4/18/15", 
+    "course_id": 2
+  }
+]

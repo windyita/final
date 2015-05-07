@@ -1,0 +1,31 @@
+[
+  {
+    "title": "What's the classes room location?", 
+    "content": "As the title. Thanks!", 
+    "user_id": 1, 
+    "course_id": 1, 
+    "date": "4/6/2015"
+  }, 
+  { 
+    "title": "Syllabus Posted?", 
+    "content": "Just checking in to see if the posted has been released for this class.  Thanks!", 
+    "user_id": 2, 
+    "course_id": 1, 
+    "date": "4/8/2015"
+  }, 
+  { 
+    "title": "Submitting HW on GitHub", 
+    "content": "Should we email you our github usernames/homework folder url's or do you have everyone's github account details already?", 
+    "user_id": 3, 
+    "course_id": 1, 
+    "date": "4/9/2015"
+  }, 
+  {
+    "title": "Confusion about controllers", 
+    "content": "Based on the first question. I defined a 'greet' route. I also created a 'GreetsController' since the notes say to always pluralize controllers. However, when I test things out in chrome, rails complains at me that it's looking for 'GreetController' rather than 'GreetsController.'", 
+    "user_id": 1, 
+    "course_id": 1,
+    "date": "4/10/2015"
+  }
+]
+
