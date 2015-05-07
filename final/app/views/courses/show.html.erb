@@ -1,0 +1,15 @@
+<h2><%= @course.code %> - <%= @course.title %></h2>
+
+<p><%= @course.description %></p>
+
+<hr>
+
+<p><%= link_to "Post a Question", new_question_url %></p>
+
+<% @questions.each do |question| %>
+  <p><%= link_to question.title, question_url(question.id) %></p>
+  <p>
+    <%= link_to "edit", edit_question_url(question.id) %>
+    <%= link_to "delete", "/questions/#{question.id}", :method => 'delete' %>
+  </p>
+<% end %>
