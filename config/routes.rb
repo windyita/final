@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   root 'courses#index'
 
+  # sign up
+  get '/signup'       => 'users#new'
+  post '/users'       => 'users#create'
+
+  # sign in
+  get '/login'        => 'sessions#new'
+  post '/sessions'    => 'sessions#create'
+
   get '/courses'      => 'courses#index'
   get '/courses/:id'  => 'courses#show', as: 'course'
 

@@ -46,3 +46,5 @@ group :development, :test do
 end
 
 gem 'ez'
+
+gem 'bootstrap-sass', '~> 3.3.3'

@@ -4,6 +4,7 @@ User
   dept: string
   email: string
   role: string
+  passwd: string
     
 Course
   code: string
