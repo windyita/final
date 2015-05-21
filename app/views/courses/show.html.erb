@@ -6,10 +6,19 @@
 
 <p><%= link_to "Post a Question", new_question_url %></p>
 
-<% @questions.each do |question| %>
-  <p><%= link_to question.title, question_url(question.id) %></p>
-  <p>
-    <%= link_to "edit", edit_question_url(question.id) %>
-    <%= link_to "delete", "/questions/#{question.id}", :method => 'delete' %>
-  </p>
-<% end %>
+<table class="table table-striped table-hover">
+  <tr>
+    <th>Title</th>
+    <th>User</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% @questions.each do |question| %>
+    <tr>
+      <td><%= link_to question.title, question_url(question.id) %></td>
+      <td><%= question.user_id %></td>
+      <td><%= link_to "edit", edit_question_url(question.id) %></td>
+      <td><%= link_to "delete", "/questions/#{question.id}", :method => 'delete' %></td>
+    </tr>
+  <% end %>
+</table>
