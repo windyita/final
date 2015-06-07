@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # sign in
   get '/login'        => 'sessions#new'
   post '/sessions'    => 'sessions#create'
-  get '/logout'     => 'sessions#destroy'
+  get '/logout'       => 'sessions#destroy'
 
   get '/courses'      => 'courses#index'
   get '/courses/:id'  => 'courses#show', as: 'course'
