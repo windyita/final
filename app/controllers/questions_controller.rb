@@ -1,9 +1,16 @@
 class QuestionsController < ApplicationController
 
   before_action :find_question, :only => [:show, :edit, :update, :destroy]
+  before_action :require_user, :only => [:new, :create, :edit, :update, :destroy]
 
   def find_question
     @question = Question.find_by(id: params["id"]) 
+  end
+
+  def require_user
+    if session[:user_id].blank?
+      redirect_to root_url, notice: "You need to login to do that."
+    end
   end
 
   def show
