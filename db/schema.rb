@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "dept"
     t.string "email"
     t.string "role"
-    t.string "passwd"
+    t.string "password"
   end
 
 end

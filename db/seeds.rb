@@ -19,7 +19,7 @@ user_data.each do |user_hash|
   user.email  = user_hash['email'] 
   user.dept   = user_hash['dept']
   user.role   = user_hash['role']
-  user.passwd = user_hash['passwd']
+  user.password = user_hash['password']
   user.save
 end
 
