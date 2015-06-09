@@ -1,21 +1,14 @@
 class QuestionsController < ApplicationController
 
   before_action :find_question, :only => [:show, :edit, :update, :destroy]
-  before_action :require_user, :only => [:new, :create, :edit, :update, :destroy]
 
   def find_question
     @question = Question.find_by(id: params["id"]) 
   end
 
-  def require_user
-    if session[:user_id].blank?
-      redirect_to root_url, notice: "You need to login to do that."
-    end
-  end
-
   def show
     @question = Question.find_by(id: params["id"]) 
-    if @question == nil
+    if @question.nil?
       redirect_to courses_url, notice: "question not found." 
     else 
       @answers = @question.answers
@@ -23,18 +16,20 @@ class QuestionsController < ApplicationController
   end 
 
   def new
+    @question = Question.new
+    @course_id = params['course_id']
+    @user_id = session['user_id']
   end 
 
   def create
-    question = Question.new
-    question.title      = params[:title]
-    question.content    = params[:content]
-    question.user_id    = params[:user_id]
-    question.course_id  = params[:course_id]
-    question.date       = params[:date]
+    h = params.require(:question).permit(:title, :content, :user_id, :course_id, :date)
+    @question = Question.new(h)
 
-    question.save
-    redirect_to course_url(question.course_id) 
+    if @question.save
+      redirect_to course_url(@question.course_id) 
+    else
+      render 'new'
+    end
 
   end 
 
@@ -42,8 +37,9 @@ class QuestionsController < ApplicationController
   end 
 
   def update
-    @question.title      = params[:title]
-    @question.content    = params[:content]
+    h = params.require(:question).permit(:title, :content)
+    @question.title      = h[:title]
+    @question.content    = h[:content]
 
     @question.save
     redirect_to course_url(@question.course_id) 

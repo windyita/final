@@ -1,17 +1,30 @@
-<h2>My Account</h2>
+<div class="container bs-docs-container">
+  <h3>Welcome! <%= @user.name.split.map(&:capitalize).join(' ') %></h3>
+  <p><%= notice %>
+  <div class="row show-grid">
+    <% if not @enrolled_courses.empty? %>
+      <h4 class="center">Registered Courses</h4>
+      <hr>
+      <% @enrolled_courses.each do |c| %> 
+      <div class="col-md-4"><%= link_to c.code, course_url(c.id) %></div>
+      <div class="col-md-6"><%= c.title %></div>
+      <%e = @user.enrolls.find_by_course_id(c.id) %>
+      <div class="col-md-2"><%= link_to "drop", enroll_url(e.id), :method => 'delete' %></div>
+      <% end %>
+    <% end %>
+  </div>
+    
+  <div class="row show-grid">
+    <% if not @unenroll_courses.empty? %> 
+      <h4 class="center">Available Courses</h4>
+      <hr>
+      <% @unenroll_courses.each do |c| %> 
+      <div class="col-md-4"><%= c.code %></div>
+      <div class="col-md-6"><%= c.title %></div>
+      <div class="col-md-2"><%= link_to "enroll", enrolls_path(user: @user, course: c.id), :method => 'post' %></div>
+      <% end %>
 
-<p>
-  <strong>Name:</strong> <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email address:</strong> <%= @user.email %>
-</p>
-
-</p>
-	<strong>Department:</strong> <%= @user.dept %>
-</p>
-
-<p>
-	<strong>Role: </strong> <%= @user.role %>
-</p>
+    <% end %>
+  </div>
+    
+</div>

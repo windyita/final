@@ -18,11 +18,11 @@
       <%= label_tag :email %>
       <%= text_field_tag :email %>
 
-	    <%= label_tag :dept %>
+    <%= label_tag :dept %>
       <%= text_field_tag :dept %>
 
       <%= label_tag :role %>
-      <%= text_field_tag :role %>
+      <%= select_tag(:role, options_for_select([['student', 'student'], ['instructor', 'instructor']], 2)) %>
 
       <%= label_tag :password %>
       <%= password_field_tag :password %>

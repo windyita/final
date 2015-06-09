@@ -1,27 +1,21 @@
 Rails.application.routes.draw do
-  root 'courses#index'
+  root 'sessions#new'
 
   # sign up
   get '/signup'               => 'users#new'
   post '/users'               => 'users#create'
-  get '/users/:id'            => 'users#show', as: :user
+  get   '/users/:id'          => 'users#show', as: :user
   get '/users/:id/edit'       => 'users#edit', as: 'edit_user'
   patch '/users/:id'          => 'users#update'
 
   # sign in
   get '/login'        => 'sessions#new'
   post '/sessions'    => 'sessions#create'
-  get '/logout'       => 'sessions#destroy'
+  delete '/logout'    => 'sessions#destroy'
 
-  get '/courses'      => 'courses#index'
-  get '/courses/:id'  => 'courses#show', as: 'course'
-
-
-  get '/questions/new'      => 'questions#new', as: 'new_question'
-  get '/questions/:id'      => 'questions#show', as: 'question' 
-  get '/questions/:id/edit' => 'questions#edit', as: 'edit_question' 
-  patch '/questions/:id'    => 'questions#update'
-  post '/questions'         => 'questions#create'
-  delete '/questions/:id'   => 'questions#destroy'
+  resources :answers,   only: [:new, :create, :destroy]
+  resources :courses,   only: [:show]
+  resources :enrolls,   only: [:create, :destroy]
+  resources :questions, only: [:show, :new, :create, :destroy, :edit, :update]
 end
 

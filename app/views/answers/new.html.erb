@@ -1,18 +1,13 @@
-<% if @question.errors.any? %>
+<% if @answer.errors.any? %>
   <ul>
-    <% @question.errors.full_messages.each do |msg| %>
+    <% @answer.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
   </ul>
 <% end %> 
 
 <div class="container bs-docs-container">
-<%= form_for @question do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title, placeholder: "" %>
-  </div>
-
+<%= form_for @answer do |form| %>
   <div>
     <%= form.label :content %>
     <%= form.text_area :content, placeholder: "" %>
@@ -24,6 +19,10 @@
 
   <div>
     <%= form.hidden_field :course_id, value: @course_id %>
+  </div>
+
+  <div>
+    <%= form.hidden_field :question_id, value: @question_id %>
   </div>
 
   <div>

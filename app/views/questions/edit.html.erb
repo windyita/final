@@ -1,13 +1,24 @@
-<%= form_tag "/questions/#{@question.id}", :method => 'patch' do %>
+<% if @question.errors.any? %>
+  <ul>
+    <% @question.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %> 
+
+<div class="container bs-docs-container">
+<%= form_for @question, method: :patch do |form| %>
   <div>
-    <%= label_tag :title %>
-    <%= text_field_tag :title, @question.title %>
+    <%= form.label :title %>
+    <%= form.text_field :title, placeholder: "" %>
   </div>
 
   <div>
-    <%= label_tag :content %>
-    <%= text_area_tag :content, @question.content %>
+    <%= form.label :content %>
+    <%= form.text_area :content, placeholder: "" %>
   </div>
 
-  <input type="submit" name="commit" value="Update Question">
+  <input type="submit" name="commit" value="Update">
 <% end %>
+</div>
+
