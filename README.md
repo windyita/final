@@ -16,6 +16,15 @@ Contributors
 
 Updates
 -------
+**06.09**
+- Add public link
+
+**06.07**
+- Maing page appearance changed
+- Answer function added
+- Course enroll and drop function added
+- Nav bar added
+- Complete the login/logout/safe password
 
 **05.21**
 - Finished user sign up, including User model, and sign up view.
