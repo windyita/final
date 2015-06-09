@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize, only: [:show]
-
-  def new 
-    @user = User.new 
-  end
+  before_action :authorize, only: [:show, :edit, :update]
 
   def authorize
     @user = User.find_by(id: params[:id])
@@ -12,7 +8,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def new 
+    @user = User.new 
+  end
+
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @user.authenticate(params[:password])
+      @user.name = params[:name]
+      @user.dept = params[:department]
+      @user.password = params[:password]
+      @user.save
+      redirect_to user_path(@user.id)
+    else
+      redirect_to user_path(@user.id), notice: "Wrong password!"
+    end
   end
 
   def create
@@ -27,5 +42,6 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
 end
 
