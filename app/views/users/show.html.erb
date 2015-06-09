@@ -1,6 +1,4 @@
 <div class="container bs-docs-container">
-  <h3>Welcome! <%= @user.name.split.map(&:capitalize).join(' ') %></h3>
-  <p><%= notice %>
   <div class="row show-grid">
     <% if not @enrolled_courses.empty? %>
       <h4 class="center">Registered Courses</h4>

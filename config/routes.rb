@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post '/sessions'    => 'sessions#create'
   delete '/logout'    => 'sessions#destroy'
 
+  get '/about'      => 'about#about'
+
   resources :answers,   only: [:new, :create, :destroy]
   resources :courses,   only: [:show]
   resources :enrolls,   only: [:create, :destroy]
