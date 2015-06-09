@@ -1,5 +1,7 @@
 README
 ======
+**Public link available!**
+https://vast-cove-2278.herokuapp.com
 
 The final project is a piazza-like system.
 
