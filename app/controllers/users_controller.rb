@@ -28,7 +28,9 @@ class UsersController < ApplicationController
 
   def show
     @enrolled_courses = @user.courses
-    @unenroll_courses = Course.all - @enrolled_courses
+    # @unenroll_courses = Course.all - @enrolled_courses
+    @unenroll_courses = Course.where('id NOT IN (?)',  @enrolled_courses.select(:id)).page(params[:page]).per(25)
+
   end
 
   def edit

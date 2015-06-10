@@ -1,32 +1,30 @@
+
 <div class="container bs-docs-container">
   <div class="row show-grid">
     <% if not @enrolled_courses.empty? %>
       <h4 class="center">Registered Courses</h4>
-      <table class="table table-hover">
+      <hr>
       <% @enrolled_courses.each do |c| %> 
-      <tr>
-      <td><div class="col-md-4"><%= link_to c.code, course_url(c.id) %></div></td>
-      <td><div class="col-md-6"><%= c.title %></div></td>
+      <div class="col-md-4"><%= link_to c.code, course_url(c.id) %></div>
+      <div class="col-md-6"><%= c.title %></div>
       <%e = @user.enrolls.find_by_course_id(c.id) %>
-      <td><div class="col-md-2"><%= link_to "drop", enroll_url(e.id), :method => 'delete' %></div></td>
-    </tr>
+      <div class="col-md-2"><%= link_to "drop", enroll_url(e.id), :method => 'delete' %></div>
       <% end %>
-    </table>
     <% end %>
   </div>
+
+  <%= paginate @unenroll_courses %>
     
   <div class="row show-grid">
     <% if not @unenroll_courses.empty? %> 
       <h4 class="center">Available Courses</h4>
-      <table class="table table-hover">
+      <hr>
       <% @unenroll_courses.each do |c| %> 
-      <tr>
-      <td><div class="col-md-4"><%= c.code %></div></td>
-      <td><div class="col-md-6"><%= c.title %></div></td>
-      <td><div class="col-md-2"><%= link_to "enroll", enrolls_path(user: @user, course: c.id), :method => 'post' %></div></td>
-    </tr>
+      <div class="col-md-4"><%= c.code %></div>
+      <div class="col-md-6"><%= c.title %></div>
+      <div class="col-md-2"><%= link_to "enroll", enrolls_path(user: @user, course: c.id), :method => 'post' %></div>
       <% end %>
-    </table>
+
     <% end %>
   </div>
     
